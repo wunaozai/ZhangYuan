@@ -26,6 +26,7 @@ int main(int argc,char * argv[])
 	printf("pthread_create is created...\n");
 	return -1;
     }
+    sleep(1);/*这里要进行延时，否则还没有等线程执行完，就退出进程 就不会输出new thread create...*/
     printf("pthread_create is created...\n");
     return 0;
 }
