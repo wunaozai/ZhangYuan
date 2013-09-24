@@ -4,7 +4,7 @@
  * @Created: 2013-08-05 04:27
  * @Author: 林明晓 -- 563804489@qq.com
  * @Description: 
- * @GitHub: https://github.com/wunaozai/Linux_Zhanyuan
+ * @GitHub: https://github.com/wunaozai/Zhanyuan
  *
  * @History: 
  ****************************************/
