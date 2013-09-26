@@ -37,5 +37,5 @@ int main()
     signal(SIGHUP,sigroutine); /*下面设置3个信号量处理函数*/
     signal(SIGINT,sigroutine);
     signal(SIGQUIT,sigroutine);
-    for(;;);
+    for(;;);//如果没有这个将会直接结束程序
 }

@@ -33,6 +33,11 @@ int main()
     /*将相应的信号加入信号集*/
     if(sigaddset(&set,SIGQUIT)<0)
     {
+	perror("sigaddset SIGQUIT\n");
+	exit(-1);
+    }
+    if(sigaddset(&set,SIGINT)<0)
+    {
 	perror("sigaddset SIGINT\n");
 	exit(-1);
     }
@@ -45,7 +50,7 @@ int main()
     else
     {
 	printf("blocked,and sleep for 5s...\n");
-	sleep(5);
+	sleep(1);
     }
 
     if(sigprocmask(SIG_UNBLOCK,&set,NULL)<0)
