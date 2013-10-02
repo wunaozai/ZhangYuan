@@ -43,14 +43,22 @@ int main(int argc,char **argv)
     ret=connect(fd,(struct sockaddr *)&remoteaddr,sizeof(struct sockaddr));
     if(ret<0)
     {
-	printf("send() error!\n");
+	printf("connect() error!\n");
 	return -2;
 	//goto finish;
     }
     //从服务器端读取信息
     readline(fd,data,1024);
 
-    printf("sent line:%s\n",data);
+    printf("Client read line:%s\n",data);
+    //向服务器端发出信息
+    strcpy(data,"This infomation from Client.");
+    ret=send(fd,data,sizeof(data),0);//发送
+    if(ret<0)
+    {
+	printf("send() error!\n");
+	return -1;
+    }
     printf("client exit.\n");
 
     /*关闭套接字*/
