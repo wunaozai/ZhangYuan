@@ -1,0 +1,1 @@
+cmd_/root/ZhangYuan/Chat-7/mymodule.ko.unsigned := ld -r -m elf_i386 -T /usr/src/kernels/2.6.32-358.el6.i686/scripts/module-common.lds --build-id -o /root/ZhangYuan/Chat-7/mymodule.ko.unsigned /root/ZhangYuan/Chat-7/mymodule.o /root/ZhangYuan/Chat-7/mymodule.mod.o 
